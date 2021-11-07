@@ -1,0 +1,107 @@
+version
+7
+
+Updated 11 Nov 21	- Overhauled read-in/read-out to and from R, addeded additional error handling for most procedures, update to allow user to hange R version used
+Updated 31 Oct 21	- Extensive updates, update core R caller script, update scripts to read data_in and write data_out to xlsx
+Updated 27 Mar 21	- Updated for public sharing, removed some features, added function for getting frequency from mutli-choice CSV data
+Updated 16 Mar 21	- Upated taobao scraper (rcaller not implemented properly)
+Updated 22 Feb 21	- Added 64bit support for read/write INI, added a 'close other workbooks folder'
+Updated 19 Feb 21	- Overhauled settings .INI read/write process, added days remain warning to settings info page
+Updated 18 Feb 21	- Added option to suppress missing licence warning after first occurance
+Updated 17 Feb 21	- Added macro to split table into sheets based on an ID column
+Updated 23 Dec 20	- Added a function to unstack a table into seperate tables on the same row, improved delete second column function
+Updated 22 Dec 20	- Updated Dendogram to list full range of cluster solutions, added Hofestede Cultural Dimensions to example data, added function to save selection as R data object for easy loading to R (no UFT-8 support), added EULA to settings
+Updated 21 Dec 20	- Added function to calculate euclidean distance, added tool to strip upper diag of matrix
+Updated 23 Nov 20	- Added worksheet functions for sig-testing, added ribbon button to hide/unhide sheet tabs
+Updated 29 Oct 20	- Changed random percent generate to work of distribution of real survey, not just random normal distribution
+Updated 21 Aug 20	- Added some bug fix for Sankey which expected table to start in R1C1
+Updated 19 Aug 20	- Added some string concatenation helpers for SPSS (e.g. a + b + c)
+Updated 16 Aug 20	- Updated adding dendro-x analysis - untested
+Updated 19 June 20	- Updated CA map to include a dialogue for passive rows and columns
+Updated 2 June 20	- Updated country flags based on slidekicks7
+Updated 2 June 20	- Localized the packages so user no longer needs to download packages locally, packages are stores in C:\kctools\R-3.6.1\library
+Updated 23 May 20	- Updated the pattern function, added function to visualize venn diagram
+Updated 17 May 20	- Added a translation function, changed CRAN from tsinghua to https://cloud.r-project.org/ which is more up to date, added function to handle xlsx in/out
+Updated 28 March 20	- Updated CA map so you do supplementary rows and columns at same time / removed the need to call from .bat file
+Updated 4 March	20	- Bug fix for CA map with no supplementary cols
+Updated 29 February 20	- Added pattern analysis (i.e. frequency of response across columns)
+Updated 26 February 20	- Added a macro to generate random percentage data, useful for templating and prototying reports
+Updated 25 February 20	- Added function to do PSM for sub groups with N-M extension
+Updated 12 February 20	- Added function to access the R colour brewer package from within Excel, added dashboard training
+Updated 12 February 20	- Added macro to save current file to macro temp folder, stop you clogging desktop with random temp files
+Updated 16 January 20	- Added tool to help insert images based on list of image names (e.g. brand mastheards)
+Updated 12 January 20	- Added basic JD scraper, needs further development
+Updated 11 January 20	- Added 'colour code', split tools across two tabs, reinstated 'rotate CA map', added Kantar colours to colours.ini
+Updated 17 December 19	- Updated the example data, adding new example and general tidy up to make more user friendly
+Updated 17 December 19	- Added function to strip sig testing flags from cells in selected range using RegEx function (also moved utab tidy to format section)
+Updated 16 December 19 	- Updated MDS to plot both columns and rows (interpretation of distances tbc)
+Updated 15 December 19	- Added function for correlation network analysis
+Updated 3 December 19 	- Added version checker so people can check if they have latest version
+Updated 1 December 19	- Reinstated utab tidy and country flag for global team roll-out
+Updated 24 November 19	- Added function for scraping TaoBao
+Updated 24 October 19	- Reinstated index splitter for utab
+Updated 17 October 19	- Added a tool to create simple MDS off of a table
+Updated 11 October 19	- Reparied install process
+Updated 10 October 19 	- Bug fixed stack tables, now also omits any rows with no data
+Updated 10 October 19 	- Added a link in settings for people to access 3rd party tools ViewSav and PSPP
+Updated 10 October 19 	- Added a user defined function to strip out charchters based on a regular expression (RegEx)
+Updated 9 October 19 	- Added 'tool-tips' to ribbon to explain what each macro does
+Updated 29 Sept 19	- Reogranised ribbon, added macro to create index cover sheet, added example datasets
+Updated 29 Sept 19	- Added function to do shapley regression (drivers analysis based on linear regression)
+Updated 29 Sept	19	- Added function to do correlation on raw data (spearman) & format output
+Updated 24 Sept 19	- Updated stack function so you can specifiy columns to be held in the stacking (e.g. sup:4, hold first 4 columns)
+Updated 04 July 19	- Added function to make conditional format perm. | fixed bug on index splitter | added macro delete very other column
+Updated 04 July 19	- Added function to compare all pairs of columns in a table | removed flat utab beta from menu bar
+Updated 04 May 19	- Fixed bug where batch EVA not being called
+Updated 15 May 19	- Added brand index to bf, changed so user could select path to input files
+Updated 3 May 19	- Fixed bug in bf_set_lables
+Updated 24 April 19	- Added a function to fill down labels (e.g. in pivot table where repeating row labels required
+Updated 23 April 19	- Added a tiny function of reformatting a type of SPSS table, also tweaked version check to < from <>
+Updated 17 April 19	- Changed path for checking network updates after drive migration
+Updated 17 April 19	- Added R function to create circle charts
+Updated 16 April 19	- Added R function to create data cube for brand fit and gap for use in PowerBI template
+Updated 16 April 19	- Added macro to delete columns with low base size
+Updated 11 April 19	- Extended index fomatting settings to index splitter
+Updated 11 April 19	- Added option for having 2 levels of conditional formatting on the index, updated settings menu
+Updated 10 April 19	- Added licence file check & ability to update from within
+Updated 31 March 19	- Added integration with google charts so can generate sankey directly
+Updated 18 March 19	- Added factor analysis script to run factor off correlation matrix (can run from utab)
+Updated 14 March 19	- Added tool to covert cross tab of segment sizes vs. themselves into the format needed to create sankey on google charts (e.g. 6,7,8,9 solution vs. itself to see migration)
+Updated 11 March 19	- Added option to delete contents of output folder
+Updated 11 March 19	- Added install & update macros batch files to make it easy for people to copy and install macros
+Updated 10 March 19	- Used CustomUI to embed toolbar in macros.xlam to remove dependency on import/overwrite customisation
+Updated 9 March 19	- Created global sub to call R files, so as not to duplicate code, updated all r calling routines
+Updated 9 March 19	- Updated EVA so clean column lables exported rather than R style labels with spaces seperated by periods
+Updated 9 March 19	- Overhauled hand off between R & Excel to reduce errors triggerd by slow writing of output from R to excel
+Updated 8 March 19	- Added simple macro to delete all images on sheet (compliment to images tool)
+Updated 4 March 19 	- Added some additional error handling to brand fit automation
+Updated 2 March 19	- Updated flags, changed base flags, changed how images group, added settings for marrimeko
+Updated 1 March 19	- Added feature to allow user to change rules for highlighting index (120/80) and whether to format font or cell interior via adding settings dialogue
+Updated 1 March 19	- Updated from-2-lines so it creates a new group of shapes each time its run rather than grouping all shapes on sheet
+Updated 1 March 19	- Update to flatten utab based on more data
+Updated 26 February 19	- Fixed bug on brand fit, where it wasn't correctly validating data structure and wrongly throwing error message
+Updated 24 February 19	- Added a function to flatten utab table so it more easily goes into dashboad
+Updated 20 February 19	- Added a function to unhide all sheets
+Updated 24 January 19	- Modified 'split tables' function so tables export in a nicer format
+Updated 21 January 19	- Need to improve integration with R, running on large files and throw error because of pre-defined wait time
+Updated 21 January 19	- Added 'from-to' lines function. Builds on script 'DrawArrows' by Ryan Wells 10/2015
+Updated 7 December 18 	- fixed bug in Csort where labels wern't correlated with data
+Updated 11 November 18 	- added new feature to make Marimeko chart, fixed bug in flags macro (handle multiple errors in loop)
+Updated 27 October 18 	- added a function to sort a cluster solution in the style of factor analysis
+Updated 24 October 18 	- added a function to insert country flags based on a list of countries and size by row height
+Update 10 October 18	- added function to round table of numbers so they sum to 100% (i.e. for segment sizes), function works columnwise, so assumes cols sum 100%, updated install guide
+Update 5 October 18 	- fixed 'first run' so it install reshape2 package properly, fixed bug in brand fit tool viz checking number of segs = even number
+Update 3 October 18 	- updated correspondence map to allow specification of supplementary/passive columns.
+Update 1 October 18 	- added too for brand fit, included a function to strip numbers from text
+Update 29 September 18 	- stability fix to account for log file creation before R finihsed exporting data
+Update 19 September 18 	- added new feature to do multiple EVA at one time
+Update 17 September 18 	- added new feature to create dendograms from tables | added option to make index 120/80 permenant
+Update 16 September 18 	- added new feature to stack tables as input to pivot table
+Update 16 September 18 	- fixed issue where index splitter didnt fromat last column with border
+Update 15 September 18 	- overhaul how corespondence map handles labels to make less buggy | updated install guide and added FIRST_RUN script to install required packages | change network path for checking version
+Update 13 September 18 	- changed chart output format of corespondence analysis
+Update 30 August 18 	- fixed fucntion to split table into multiple sorted tables and sort by index
+Update 22 March 18 	- added function to split table into multiple sorted tables
+Update 22 March 18 	- sort problem where if used in quick succession there is a file name conflict for save as
+Update 17 March 18 	- camap.r updated 18 Mar - added support for long statement lists by adding prefix v_
+Updated 1 October 15	- Set-up code for simple hand over between R and XL
