@@ -7,6 +7,7 @@ R is a free software and comes with ABSOLUTELY NO WARRANTY. https://www.R-projec
 Create directory c:/xl_toolbox and place all files inside
 Create a sub-directory called "myoutput" for output to be saved
 Open Macros.xlam and go to settings to update you R Bin path (or set it in settings.ini)
+If you don't have R installed, download R from https://www.R-project.org/. This toolkit was built and tested on version R-4.1.1.
 
 ##Disclaimer of warranty
 There is no warranty for this tool, to the full extent permitted by applicable law. 
